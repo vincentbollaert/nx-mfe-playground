@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/custom-mfe-e2e"
+    },
+    {
+      "path": "./apps/custom-mfe"
+    }
+  ]
+}
