@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: Side project features API
+  description: API for managing side project features
+  version: 0.0.1
+
+servers:
+  - url: /api/v1
+    description: API routes
+
+components:
+  examples:
+    Feature:
+      value:
+        id: "id1"
+        name: "Modern web applications"
+        description: "Modern web applications showing diverging setups"
+        status: "done"
+
+    Features:
+      value:
+        features:
+          - id: "id2"
+            name: "Shared component library"
+            description: "Tailwind component library with codegen"
+            status: "done"
+
+  schemas:
+    Feature:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Auto-generated ID for the feature
+        name:
+          type: string
+          description: Name of the feature
+        description:
+          type: string
+          description: Description of the feature
+        status:
+          type: string
+          description: Status of the feature 'not started' | 'in progress' | 'done'
+      required:
+        - id
+        - name
+        - description
+        - status
+      example:
+        default:
+          $ref: "#/components/examples/Feature"
+
+paths:
+  /features:
+    get:
+      summary: Get features
+      responses:
+        "200":
+          description: Features
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  features:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Feature"
+              examples:
+                default:
+                  $ref: "#/components/examples/Features"

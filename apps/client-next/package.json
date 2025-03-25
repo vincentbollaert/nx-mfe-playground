@@ -1,0 +1,44 @@
+{
+  "name": "client-next",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "prettier": "@repo/prettier-config",
+  "dependencies": {
+    "@repo/api": "*",
+    "@repo/ui": "*",
+    "@tanstack/react-query": "^5.66.9",
+    "clsx": "^2.1.1",
+    "next": "^15.1.6",
+    "open-props": "^1.7.13",
+    "openapi-fetch": "^0.13.4",
+    "openapi-react-query": "^0.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sass": "^1.85.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@repo/prettier-config": "*",
+    "@next/eslint-plugin-next": "^15.1.6",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^9.20.0",
+    "typescript": "^5.7.3"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

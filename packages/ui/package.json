@@ -1,0 +1,69 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "./global.scss": "./src/styles/global.scss",
+    "./skeleton": "./src/primitives/skeleton/skeleton.tsx",
+    "./info": "./src/components/info/info.tsx",
+    "./button": "./src/components/button/button.tsx",
+    "./switch": "./src/components/switch/switch.tsx",
+    "./select": "./src/components/select/select.tsx",
+    "./feature": "./src/patterns/feature/feature.tsx",
+    "./navigation": "./src/patterns/navigation/navigation.tsx",
+    "./mockSelector": "./src/patterns/mockSelector/mockSelector.tsx",
+    "./socials": "./src/patterns/socials/socials.tsx",
+    "./appSwitcher": "./src/patterns/appSwitcher/appSwitcher.tsx",
+    "./frame": "./src/templates/frame/frame.tsx",
+    "./hooks": "./src/hooks/index.ts"
+  },
+  "scripts": {
+    "ladle:build": "bun ladle build",
+    "ladle:serve": "bun run ladle:build && ladle serve",
+    "lint": "eslint src --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "generate:component": "turbo gen component",
+    "sync-package-exports": "node scripts/sync-package-exports.cjs"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "prettier": "@repo/prettier-config",
+  "devDependencies": {
+    "@repo/prettier-config": "*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@repo/api": "*",
+    "@repo/api-mocks": "*",
+    "@turbo/gen": "^2.4.0",
+    "@types/glob": "^8.1.0",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^9.20.0",
+    "glob": "^11.0.1",
+    "postcss-jit-props": "^1.0.16",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@ladle/react": "^5.0.1",
+    "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/react-avatar": "^1.1.3",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-switch": "^1.1.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.1.2",
+    "lucide-react": "^0.475.0",
+    "open-props": "^1.7.13"
+  }
+}

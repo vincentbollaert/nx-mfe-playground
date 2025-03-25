@@ -1,0 +1,62 @@
+.trigger {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-lg);
+  height: 35px;
+  gap: var(--space-lg);
+  background-color: var(--color-surface-strong);
+  color: var(--color-text-inverted);
+  border-radius: var(--radius-drawn-6);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover,
+  &[data-state="open"] {
+    background-color: var(--color-surface-strongest);
+  }
+}
+
+.chevronIcon {
+  color: var(--color-text-inverted);
+  width: 16px;
+  height: 16px;
+}
+
+.content {
+  width: var(--radix-select-trigger-width);
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-radius: var(--radius-drawn-4);
+  overflow: hidden;
+  background-color: var(--color-surface-strongest);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.viewport {
+  padding: 5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 2px var(--space-md);
+  position: relative;
+  user-select: none;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+
+  &[data-highlighted],
+  &[data-state="checked"] {
+    outline: none;
+    color: var(--color-text-inverted);
+  }
+
+  &:hover {
+    color: var(--color-text-inverted);
+  }
+}

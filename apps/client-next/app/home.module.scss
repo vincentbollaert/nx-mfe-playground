@@ -1,0 +1,37 @@
+.row {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: var(--space-xlg);
+  margin-top: var(--space-xlg);
+  align-items: center;
+
+  &:first-child {
+    margin-top: 50px;
+  }
+}
+
+.skeletonCircle {
+  border-radius: var(--radius-full);
+}
+
+.featuresTab {
+  width: 500px;
+}
+
+.learningsTab {
+  width: 740px;
+  color: var(--color-text-subtle);
+
+  h2 {
+    font-size: var(--text-size-heading);
+    color: var(--color-text-default);
+    margin-top: 34px;
+    position: relative;
+    margin-left: -30px;
+    padding-left: 30px;
+
+    &:hover a {
+      display: block;
+    }
+  }
+}

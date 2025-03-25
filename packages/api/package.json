@@ -1,0 +1,26 @@
+{
+  "name": "@repo/api",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "openapi-ts"
+  },
+  "exports": {
+    "./apiClient": "./src/apiClient/client.gen.ts",
+    "./reactQueries": "./src/apiClient/@tanstack/react-query.gen.ts",
+    "./reactQueryClient": "./src/reactQueryClient.tsx",
+    "./apiTypes": "./src/apiTypes.ts"
+  },
+  "prettier": "@repo/prettier-config",
+  "devDependencies": {
+    "@repo/prettier-config": "*",
+    "@hey-api/openapi-ts": "^0.64.7",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "msw": "^2.7.0"
+  },
+  "dependencies": {
+    "@hey-api/client-fetch": "^0.8.2"
+  }
+}

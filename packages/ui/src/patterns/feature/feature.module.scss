@@ -1,0 +1,84 @@
+@use "../../components/button/button.module.scss";
+
+.feature {
+  --btn-right-spacing: var(--core-space-6);
+
+  margin-top: var(--space-sm);
+  padding: var(--space-lg);
+  position: relative;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: box-shadow 0.2s var(--ease-out-3);
+
+  &:hover,
+  &[data-expanded="true"] {
+    background-color: var(--color-surface-strong);
+
+    .expandButton {
+      @extend %ghost-btn-hover;
+    }
+
+    .title {
+      color: var(--color-text-muted);
+    }
+
+    .switch {
+      background-color: var(--color-surface-stronger);
+
+      &[data-state="checked"] {
+        background-color: var(--color-accent-brighter);
+      }
+    }
+
+    .expandButton {
+      background-color: var(--color-surface-stronger);
+      color: var(--color-text-inverted);
+    }
+
+    .icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.switchWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: var(--text-size-body2);
+  flex-grow: 1;
+  color: var(--color-text-default);
+}
+
+.expandButton {
+  position: absolute;
+  right: var(--btn-right-spacing);
+}
+
+.icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.description {
+  margin-top: 1.6rem;
+  display: none;
+
+  [data-expanded="true"] & {
+    display: block;
+  }
+}
+
+.descriptionText {
+  font-size: var(--text-size-body);
+  color: var(--color-text-muted);
+}

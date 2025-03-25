@@ -1,0 +1,78 @@
+%ghost-btn-hover {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-default);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: var(--text-size-body);
+  cursor: pointer;
+
+  & svg {
+    pointer-events: none;
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    &:not([class*="size-"]) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.btnDefault {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-default);
+
+  &:hover {
+    background-color: var(--color-surface-strongest);
+    color: var(--color-surface-base);
+  }
+}
+
+.btnGhost {
+  &:hover {
+    @extend %ghost-btn-hover;
+  }
+}
+
+.btnLink {
+  color: var(--color-text-subtle);
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: var(--color-surface-strong);
+  }
+
+  &[data-active="true"] {
+    color: var(--color-text-muted);
+    background: var(--color-surface-strong);
+  }
+}
+
+.btnSizeDefault {
+  padding: var(--space-md);
+
+  &:has(> svg) {
+    padding-inline: 0.75rem;
+  }
+}
+
+.btnSizeLarge {
+  padding: var(--space-xlg) var(--space-xxlg);
+  font-size: 24px;
+}
+
+.btnSizeIcon {
+  inline-size: 3.8rem;
+  block-size: 3.8rem;
+}

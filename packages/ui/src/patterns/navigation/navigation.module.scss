@@ -1,0 +1,19 @@
+@use '../../styles/animations.scss';
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-xxxlg);
+}
+
+.navItem {
+  margin: 0 var(--space-md);
+
+  &[data-active='true'] {
+    background-color: var(--color-surface-strong);
+    animation:
+      radiusBlobbing1 3.3s ease-in infinite,
+      radiusBlobbing2 5s ease-in infinite,
+      shadowsChaosing 4s ease infinite;
+  }
+}
