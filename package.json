@@ -6,7 +6,8 @@
     "syncpack": "^13.0.2",
     "tsx": "4.19.1",
     "turbo": "^2.4.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "nx": "20.6.4"
   },
   "engines": {
     "node": ">=18"
@@ -14,14 +15,9 @@
   "packageManager": "bun@1.2.2",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "deps:check": "syncpack list-mismatches",
     "deps:fix": "syncpack fix-mismatches",
-    "generate": "turbo run generate",
     "prepare": "husky || true"
   },
   "workspaces": [

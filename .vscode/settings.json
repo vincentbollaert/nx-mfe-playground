@@ -16,5 +16,6 @@
   },
 
   // file explorer
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "nxConsole.nxWorkspacePath": ""
 }

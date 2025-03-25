@@ -27,3 +27,8 @@ yarn-error.log*
 generated
 dist
 apps/client/.env
+
+
+
+.nx/cache
+.nx/workspace-data
